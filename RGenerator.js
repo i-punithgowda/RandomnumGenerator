@@ -1,15 +1,23 @@
-const range=document.querySelector('.range');
-const submit=document.querySelector('.submitBtn');
-const rand=document.querySelector('.randomno');
+const range=document.querySelector('.form-control');
+const btn=document.querySelector('.btn');
 
-// range.addEventListener('change', ()=>{
-//     console.log(range.value);
+// range.addEventListener('change',() =>{
+// console.log(range.value);
 // });
 
-submit.addEventListener('click',e=>{
-    e.preventDefault();
+
+btn.addEventListener('click',e =>{
+e.preventDefault();
+const load=document.querySelector('.spinner-border');
 
 const num=range.value;
-const randomNumber=Math.floor(Math.random() * num);
-rand.textContent=randomNumber;
+
+// console.log(Math.floor(Math.random() * num ));
+const rand = Math.floor(Math.random() * num );
+const txtarea=document.querySelector('.rand');
+txtarea.textContent=rand;
+
+
+
+
 });
